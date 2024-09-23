@@ -15,9 +15,32 @@ namespace BAI
         /// ------------------------------------------------------------
         public static void Opdr1FilterList(List<int> lijst)
         {
-            // *** IMPLEMENTATION HERE *** //
-        }
+            //gebruik van dictionary als eis van opdracht
+            //Dictionary gebruikt om waarde en aantal voorkomen bij te houden
+            Dictionary<int, int> dict = new Dictionary<int, int>();
 
+            foreach (int item in lijst)
+            {
+                if (dict.ContainsKey(item)) {
+                    dict[item]++; //als item al in dictionary voorkomt, verhoog aantal
+               } 
+                else dict[item] = 1;//als item nog niet in dictionary staat, voeg toe met aantal 1
+            } 
+            //verwijderen van elementen die maar 1x voorkomen zonder lambda expressie
+            List<int> teVerwijderenItems = new List<int>();
+
+            foreach (int item in dict.Keys) //
+            {
+                if (dict[item] == 1)
+                {
+                    teVerwijderenItems.Add(item);
+                }
+            }
+            foreach (int item in teVerwijderenItems)
+            {
+                lijst.Remove(item);
+            }
+        }
 
         /// ------------------------------------------------------------
         /// <summary>
