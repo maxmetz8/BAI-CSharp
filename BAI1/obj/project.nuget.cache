@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "SH1aYHXQG2qXaJRhvtIWqym0vra3tGS7+FOPMiND7CRGWaaeBwIPZjl1Hpgr3GzVw5VliQLCRNLn3Xke7w4w3A==",
+  "success": true,
+  "projectFilePath": "/Users/noahnap/Desktop/Aftekenopdracht1/BAI1/BAI1.csproj",
+  "expectedPackageFiles": [
+    "/Users/noahnap/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/Users/noahnap/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/Users/noahnap/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.32/microsoft.netcore.app.host.osx-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}
