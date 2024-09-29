@@ -90,7 +90,25 @@ namespace BAI
         {
             Stack<int> stack = new Stack<int>();
 
-            // *** IMPLEMENTATION HERE *** //
+            //Het gebruiken van een HashSet is essentieel om ervoor te zorgen dat de getallen uniek zijn maar ook dat het toevoegen van een getal O(1) is
+            // want het checken of een getal al in de HashSet zit is O(1) en bij een List of de contains methode is dit O(n). De test wordt anders te traag
+            HashSet<int> uniekeGetallen = new HashSet<int>();
+
+            //random getallen genereren
+            Random random = new Random();
+
+            // Blijf getallen genereren zolang het aantal unieke getallen kleiner is dan count
+            while (uniekeGetallen.Count < count)
+            {
+                //Genereer een random getal tussen lower en upper waarbij upper inclusief is dus +1 krijgt
+                int randomGetal = random.Next(lower, upper + 1);
+
+                // Voeg alleen toe aan de stack als het getal uniek is
+                if (uniekeGetallen.Add(randomGetal))
+                {
+                    stack.Push(randomGetal);
+                }
+            }
 
             return stack;
         }
