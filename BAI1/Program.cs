@@ -52,13 +52,16 @@ namespace BAI
         public static Queue<int> Opdr2aQueue50()
         {
             Queue<int> q = new Queue<int>();
-
-            // *** IMPLEMENTATION HERE *** //
-
-            return q;
+            // For loop dat draait van 1 t/m 50.
+            for (int i = 1; i <= 50; i++)   
+                
+            {     // Voegt het huidige getal toe naar de achterkant van de queue(rij).
+                q.Enqueue(i);               
+            }
+            
+            return q;    
         }
-
-
+        
         /// ------------------------------------------------------------
         /// <summary>
         /// Haalt alle elementen uit een queue. Voegt elk element dat
@@ -71,9 +74,21 @@ namespace BAI
         public static Stack<int> Opdr2bStackFromQueue(Queue<int> queue)
         {
             Stack<int> stack = new Stack<int>();
-
-            // *** IMPLEMENTATION HERE *** //
-
+            
+            // Zolang de queue niet leeg is 
+            while (queue.Count > 0)
+            {
+                // Haalt het element item uit de queue 
+               var element =  queue.Dequeue();
+               
+               // Checkt of het element deelbaar is door 4 
+               if (element % 4 == 0)
+               {
+                   // Als het deelbaar door 4 is dan push hij het element aan de stack
+                   stack.Push(element); 
+               }
+            }
+            
             return stack;
         }
 
